@@ -34,7 +34,7 @@ body
         border-radius: 50%
 
 @mixin makeCard($card-color: #123456, $card-width: 80%, $card-shadow-color: transparent)
-    width: $card-width
+    width: min($card-width, 80%)
     margin: auto
     border-radius: 10px
     background-color: $card-color

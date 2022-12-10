@@ -25,7 +25,7 @@ body {
 }
 
 main {
-  width: 400px;
+  width: min(400px, 80%);
   margin: auto;
   border-radius: 10px;
   background-color: hsl(217deg, 19%, 24%);
