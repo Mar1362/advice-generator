@@ -1,0 +1,50 @@
+@use "mar" with ($center-content: true, $elements-fill-container-width: true)
+
+$light-cyan: hsl(193, 38%, 86%)
+$neon-green: hsl(150, 100%, 66%)
+$grayish-blue: hsl(217, 19%, 38%)
+$dark-grayish-blue: hsl(217, 19%, 24%)
+$dark-blue: hsl(218, 23%, 16%)
+$font-family: Manrope, auto
+
+body
+    background-color: $dark-blue
+main
+    @include mar.makeCard($card-width: 400px, $card-color: $dark-grayish-blue)
+    padding-bottom: 50px
+
+h1
+    text-transform: uppercase
+    font-family: $font-family
+    font-weight: 100
+    font-size: small
+    letter-spacing: 3px
+    color: $neon-green
+
+#advice-text
+    color: $light-cyan
+    font-family: $font-family
+    font-weight: 800
+    font-size: large
+    margin-top: 20px
+    margin-bottom: 20px
+
+#shuffle-advice
+    @include mar.roundedCorner($border-style:none, $circle: true)
+    width: 50px
+    height: 50px
+    background-color: $neon-green
+    position: absolute
+    bottom: -25px
+    right: calc( 50% - 25px )
+    cursor: pointer
+    &:disabled
+        background-color: $light-cyan
+        cursor: not-allowed
+.dice-bg
+    background-image: url(images/icon-dice.svg)
+    background-repeat: no-repeat
+    background-position: center
+
+#shuffle-advice:hover:not(:disabled)
+        @include mar.makeNeon($color: $neon-green, $rounded: true)

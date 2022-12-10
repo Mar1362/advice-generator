@@ -1,0 +1,51 @@
+$font-size: 14px !default
+$center-content: false !default
+$elements-fill-container-width: false !default
+
+
+:root
+    font-size: $font-size
+    
+*,
+*::before,
+*::after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-size: $font-size
+    @if $elements-fill-container-width
+        width: 100%
+
+body
+    @if $center-content
+        min-height: 100vh
+        display: flex
+        flex-flow: column nowrap
+        justify-content: center
+        align-items: center
+
+
+@mixin roundedCorner($border-style: solid, $border-size: 1px, $color: #555, $circle: false)
+    border-style: $border-style
+    padding-inline: 4%
+    border: $border-size $border-style $color
+    border-radius: 50px
+    @if $circle
+        border-radius: 50%
+
+@mixin makeCard($card-color: #123456, $card-width: 80%, $card-shadow-color: transparent)
+    width: $card-width
+    margin: auto
+    border-radius: 10px
+    background-color: $card-color
+    box-shadow: 0 0 13px $card-shadow-color
+    padding: 30px
+    text-align: center
+    position: relative
+    
+@mixin makeNeon($color: #45fd67, $rounded: false)
+    background-color: $color
+    border: 5px solid rgba($color,.1)
+    box-shadow: 0 0 20px $color
+    @if $rounded 
+        border-radius: 50%

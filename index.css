@@ -1,0 +1,87 @@
+:root {
+  font-size: 14px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: hsl(218deg, 23%, 16%);
+}
+
+main {
+  width: 400px;
+  margin: auto;
+  border-radius: 10px;
+  background-color: hsl(217deg, 19%, 24%);
+  box-shadow: 0 0 13px transparent;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: Manrope, auto;
+  font-weight: 100;
+  font-size: small;
+  letter-spacing: 3px;
+  color: hsl(150deg, 100%, 66%);
+}
+
+#advice-text {
+  color: hsl(193deg, 38%, 86%);
+  font-family: Manrope, auto;
+  font-weight: 800;
+  font-size: large;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#shuffle-advice {
+  border-style: none;
+  padding-inline: 4%;
+  border: 1px none #555;
+  border-radius: 50px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: hsl(150deg, 100%, 66%);
+  position: absolute;
+  bottom: -25px;
+  right: calc(50% - 25px);
+  cursor: pointer;
+}
+#shuffle-advice:disabled {
+  background-color: hsl(193deg, 38%, 86%);
+  cursor: not-allowed;
+}
+
+.dice-bg {
+  background-image: url(images/icon-dice.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#shuffle-advice:hover:not(:disabled) {
+  background-color: hsl(150deg, 100%, 66%);
+  border: 5px solid rgba(82, 255, 168, 0.1);
+  box-shadow: 0 0 20px hsl(150deg, 100%, 66%);
+  border-radius: 50%;
+}/*# sourceMappingURL=index.css.map */
